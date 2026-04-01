@@ -20,10 +20,12 @@ Features:
 - Animated counters when the stats section appears
 - Simple keyword-based analysis of study habits
 - Responsive design
+- Dark mode toggle for ease
 
 How to Run it:
 1. Download or clone the repo
-2. Open index.html in your browser
+2. Open the project folder
+3. Open index.html in your browser
 
 Why I made this:
 I mostly made this site to practice front-end skills, but to also build something that can inform users about productivity and how you can't always "just focus".

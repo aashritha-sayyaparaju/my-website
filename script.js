@@ -3,6 +3,14 @@ function scrollToSection(id) {
     document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
 }
 
+let streak = localStorage.getItem("streak") || 0;
+
+function updateStreak() {
+    streak_++;
+    localStorage.setItem("streak", streak);
+    console.log("Streak", streak);
+}
+
 // Animated counters
 function animateCounters() {
     const counters = document.querySelectorAll('.stat-number');
@@ -81,6 +89,9 @@ function resetTimer() {
     updateDistractions();
 }
 
+let sessionScore = calculateSessionScore();
+saveScore(sessionScore);
+
 function completeSession() {
     alert("Session complete. Take a Break.");
 
@@ -88,6 +99,7 @@ function completeSession() {
     sessions++;
     localStorage.setItem("sessions", sessions);
 
+    updateStreak();
     updateProgress();
 }
 
@@ -115,6 +127,12 @@ const tips = [
 function generateTip() {
     const random = tips[Math.floor(Math.random() * tips.length)];
     document.getElementById("tipOutput").innerText = random;
+}
+
+function calculateSessionScore() {
+    let score = 100 - (distractions * 10);
+    score = Math.max(0, score);
+    return score;
 }
 
 function saveScore(score) {

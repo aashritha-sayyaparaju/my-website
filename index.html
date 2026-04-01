@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FocusLab</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="description" content="FocusLab helps you improve using science-based tools like Pomodoro, tracking, and feedback.">
 </head>
 <body>
     <nav class="navbar">
@@ -57,17 +58,20 @@
         <h2>Focus Analyzer</h2>
 
         <div class="interactive-box">
-            <input type="text" id="userInput" placeholder="Describe how you usually study...">
+            <input type="text" id="userInput" placeholder="Describe how you usually study..." aria-label="Focus Input">
             <button onclick="analyzeFocus()">Analyze</button>
             <div id="output"></div>
         </div>
-          # del here
+
         <div class="card" style="margin-top:2rem;">
             <h3>Pomodoro Timer</h3>
             <p id="timerDisplay">25:00</p>
-            <button onclick="startTimer()">Start</button>
-            <button onclick="pauseTimer()">Pause</button>
-            <button onclick="resetTimer()">Reset</button>
+
+            <div class="button-group">
+                <button onclick="startTimer()">Start</button>
+                <button onclick="pauseTimer()">Pause</button>
+                <button onclick="resetTimer()">Reset</button>
+            </div>
 
             <div style="margin-top:1rem;">
                 <button onclick="logDistraction()">I got distracted</button>
