@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusLab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">FocusLab</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">Science</a>
+            <a href="#interactive">Try It</a>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <h1 class="glitch" data-text="Focus">Focus</h1>
+        <p class="subtitle">Master your attention. Control your results.</p>
+        <button class="cta-btn" onclick="scrollToSection('about')">Learn How</button>
+    </section>
+
+    <section id="about" class="content-section">
+        <div class="card">
+            <h2>The Science of Focus</h2>
+            <p>
+                Your brain isn't built for constant multitasking. Every time you switch tasks, 
+                your brain pays a “switching cost”, reducing efficiency and increasing mistakes.
+                Deep focus is the real competitive advantage.
+            </p>
+
+            <p>
+                Studies show that people who work in uninterrupted blocks outperform others 
+                in learning speed, retention, and problem-solving ability.
+            </p>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="23">0</span>
+                    <span class="stat-label">Minutes to Refocus</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="40">0</span>
+                    <span class="stat-label">% Productivity Lost</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="2">0</span>
+                    <span class="stat-label">Hours Deep Work Peak</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="interactive" class="interactive-section">
+        <h2>Focus Analyzer</h2>
+
+        <div class="interactive-box">
+            <input type="text" id="userInput" placeholder="Describe how you usually study...">
+            <button onclick="analyzeFocus()">Analyze</button>
+            <div id="output"></div>
+        </div>
+          # del here
+        <div class="card" style="margin-top:2rem;">
+            <h3>Pomodoro Timer</h3>
+            <p id="timerDisplay">25:00</p>
+            <button onclick="startTimer()">Start</button>
+            <button onclick="pauseTimer()">Pause</button>
+            <button onclick="resetTimer()">Reset</button>
+
+            <div style="margin-top:1rem;">
+                <button onclick="logDistraction()">I got distracted</button>
+                <p id="distractionCount">Distractions: 0</p>
+            </div>
+        </div>
+
+        <div class="card" style="margin-top:2rem;">
+            <h3>Focus Tips</h3>
+            <button onclick="generateTip()">Give me a tip</button>
+            <p id="tipOutput"></p>
+        </div>
+
+        <div class="card" style="margin-top:2rem;">
+            <h3>Your Progress</h3>
+            <p id="sessionCount">Sessions Completed: 0</p>
+            <p id="bestScore">Best Focus Score: 0</p>
+        </div>
+
+  
+
+        <div class="toggle-container">
+            <label class="switch">
+                <input type="checkbox" id="darkMode" onchange="toggleDarkMode()">
+                <span class="slider"></span>
+            </label>
+            <span>Dark Mode</span>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 FocusLab | Built with HTML, CSS, JS</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

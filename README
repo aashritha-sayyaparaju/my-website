@@ -1,0 +1,39 @@
+FOCUSLAB
+
+A simple interactive website about focus, productivity, and how people work bet.
+
+I built this because I kept hearing "just focus" as advice, which isn't very helpful. So this project explores why focus is hard and gives a small tool to reflect on your own habits.
+
+What it does:
+- Explains the basics of focus and deep work
+- Shows a few key stats about productivity
+- Includes a Focus Analyzer where you can describe how you study and get feedback
+- Have a dark mode toggle because light mode can get annoying
+
+Tech Used:
+- HTML
+- CSS
+- JavaScript (no frameworks)
+
+Features:
+- Smooth scrolling navigation
+- Animated counters when the stats section appears
+- Simple keyword-based analysis of study habits
+- Responsive design
+
+How to Run it:
+1. Download or clone the repo
+2. Open index.html in your browser
+
+Why I made this:
+I mostly made this site to practice front-end skills, but to also build something that can inform users about productivity and how you can't always "just focus".
+Also I wanted to experiment with making projects feel more interactive instead of just static pages.
+
+Future Improvements:
+- images
+- Add a pomodoro timer
+- Store user results (localStorage or backend)
+- make the analyzer smarter (right now it's basic)
+
+Notes:
+This isn't meant to be a complete productivity tool, it's just a small project that mixes design and interactivity.
